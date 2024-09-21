@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+:root {
+    --dg: #003c00;
+    --w: #fff;
+    --b: #000;
+    --dw: #ccc;
+    --lb: #333;
+    --g: #0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: var(--w);
+    transition: all ease 0.65s;
+}
+
+body {
+    transition: all ease 0.65s;
+    background-color: var(--b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background: var(--dg);
+    padding: 4px 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease 0.65s, background ease 0.2s;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+button:hover {
+    background: var(--g);
+}
+
+button:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 110px;
+    border: var(--g) 5px solid;
+    border-radius: 3px;
+    width: 90%;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    background: var(--dg);
+    gap: 5px;
+}
+
+input {
+    color: #000;
+}
+
+.title {
+    margin: 5%;
+}
+
+.more-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    filter: blur(999px);
+    z-index: -1;
+}
+
+.cover-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    filter: blur(999px);
+    background-image: url('../images/bubbles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
